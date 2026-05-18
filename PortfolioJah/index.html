@@ -1,39 +1,178 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio</title>
+<title>Portfolio</title>
 
-    <link rel="stylesheet" href="../style.css">
+<style>
 
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <link rel="stylesheet" href="general.css">
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1000px;
+    min-height:100vh;
+    margin:auto;
+    background:white;
+
+    border:2px solid #222;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+
+header{
+    background:#1e293b;
+    color:white;
+
+    padding:2em;
+
+    border-bottom:3px solid #0f172a;
+}
+
+header h1{
+    margin:0;
+    font-size:2.2rem;
+}
+
+/* MIDDLE */
+
+.middle{
+    display:flex;
+    flex:1;
+}
+
+/* SIDEBAR */
+
+aside{
+    width:240px;
+
+    background:#334155;
+
+    padding:2em;
+
+    border-right:3px solid #1e293b;
+}
+
+aside a{
+    display:block;
+
+    color:white;
+    text-decoration:none;
+
+    padding:12px;
+    margin-bottom:1em;
+
+    border-radius:8px;
+
+    transition:0.3s;
+}
+
+aside a:hover{
+    background:#475569;
+}
+
+/* MAIN */
+
+main{
+    flex:1;
+
+    padding:4em;
+
+    background:#ffffff;
+}
+
+main h2{
+    color:#0f172a;
+    font-size:2rem;
+}
+
+main p{
+    color:#444;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1e293b;
+
+    border-top:3px solid #0f172a;
+
+    padding:2em;
+
+    text-align:center;
+}
+
+footer a{
+    color:white;
+
+    text-decoration:none;
+
+    margin:0 2em;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+footer a:hover{
+    color:#38bdf8;
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>jahjan sivu</h1>
+<header>
+    <h1>Jahjan Portfolio</h1>
+</header>
 
-    <nav>
-        <a href="../index.html">Etusivu</a>
-        <a href="../work.html">Työkokemus</a>
+<div class="middle">
+
+    <aside>
+        <a href="keskustelu.html">Keskustelu</a>
+        <a href="flex.html">Flex harjoitus</a>
         <a href="index.html">Portfolio</a>
-        <a href="flex.html">Pokemons</a>
-    </nav>
+       
+    </aside>
 
-    <h2>Portfolio</h2>
+    <main>
+        <h2>Portfolio</h2>
 
-    <p>
-        Tässä portfoliossa on Web-ohjelmointi 1 -kurssin harjoituksia.
-    </p>
+        <p>
+            Tässä portfoliossa on Web-ohjelmointi 1 -kurssin harjoituksia.
+        </p>
 
-    <br>
+        <p>
+            Sivusto on tehty HTML- ja CSS-tekniikoilla käyttäen Flexbox-rakennetta.
+        </p>
+    </main>
 
-    <a href="keskustelu.html">Keskustelu</a>
+</div>
+
+<footer>
+    <a href="../index.html">Etusivu</a>
+    <a href="../work.html">Työkokemus</a>
+    <a href="flex.html">Pokemons</a>
+</footer>
 
 </div>
 
