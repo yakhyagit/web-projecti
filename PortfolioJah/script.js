@@ -52,3 +52,27 @@ console.log(message);
 
 
 }
+
+/* New function 2*/
+
+let lista = ["Tehtävä 1", "Tehävä 2"]
+function paivitaLista () {
+  let ul = document.getElementById("lista")
+  ul.innerHTML = "";
+  lista.forEach(function(tehtava) {
+ let li = document.createElement("li")
+ li.innerHTML = tehtava;
+ ul.appendChild(li);
+
+  });
+} 
+
+function lisaa() {
+let uusiTehtava = 
+document.getElementById("tehtavaInput").value;
+lista.push(uusiTehtava)
+paivitaLista();
+
+
+}
+paivitaLista();
