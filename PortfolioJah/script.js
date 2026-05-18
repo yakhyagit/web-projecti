@@ -35,3 +35,20 @@ function laskin_jako() {
     let toka = Number(document.getElementById("numero2").value);
     jako(eka, toka)
 }
+
+/* new functions */
+
+function send(event) {
+event.preventDefault();
+let birthday = document.getElementById("birthday").value;
+let type = document.getElementById("checkbox").value;
+let email = document.getElementById("email").value;
+let message = document.getElementById("message").value;
+
+console.log(birthday);
+console.log(type);
+console.log(email);
+console.log(message);
+
+
+}
