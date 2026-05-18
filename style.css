@@ -198,3 +198,10 @@ footer{
     padding: 15px;
     margin-top: 20px;
 }
+body {
+    background-image: url("stars-1654074_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
