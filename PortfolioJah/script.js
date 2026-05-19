@@ -142,5 +142,52 @@ function showDate() {
     document.getElementById("kuukausi").innerHTML =
         "Kuukausi: " + month;
 }
+function math_sqrt() {
 
+    let numero1 =
+        Number(document.getElementById("numero1").value);
+
+    alert(Math.sqrt(numero1));
+}
+
+function math_pow() {
+
+    let numero1 =
+        Number(document.getElementById("numero1").value);
+
+    let numero2 =
+        Number(document.getElementById("numero2").value);
+
+    alert(Math.pow(numero1, numero2));
+}
+
+function math_max() {
+
+    let numero1 =
+        Number(document.getElementById("numero1").value);
+
+    let numero2 =
+        Number(document.getElementById("numero2").value);
+
+    alert(Math.max(numero1, numero2));
+}
+
+function math_min() {
+
+    let numero1 =
+        Number(document.getElementById("numero1").value);
+
+    let numero2 =
+        Number(document.getElementById("numero2").value);
+
+    alert(Math.min(numero1, numero2));
+}
+
+function math_round() {
+
+    let numero1 =
+        Number(document.getElementById("numero1").value);
+
+    alert(Math.round(numero1));
+}
 paivitaLista();
