@@ -75,4 +75,72 @@ paivitaLista();
 
 
 }
+
+// PÄIVÄMÄÄRÄFUNKTIO
+function showDate() {
+
+    const now = new Date();
+
+    // Päivämäärä
+    const date =
+        now.getDate() + "." +
+        (now.getMonth() + 1) + "." +
+        now.getFullYear();
+
+    // Aika
+    const time =
+        now.getHours() + "." +
+        now.getMinutes() + "." +
+        now.getSeconds();
+
+    // Päivä ja aika
+    const full = date + " klo " + time;
+
+    // Viikonpäivät
+    const weekdays = [
+        "sunnuntai",
+        "maanantai",
+        "tiistai",
+        "keskiviikko",
+        "torstai",
+        "perjantai",
+        "lauantai"
+    ];
+
+    // Kuukaudet
+    const months = [
+        "tammikuu",
+        "helmikuu",
+        "maaliskuu",
+        "huhtikuu",
+        "toukokuu",
+        "kesäkuu",
+        "heinäkuu",
+        "elokuu",
+        "syyskuu",
+        "lokakuu",
+        "marraskuu",
+        "joulukuu"
+    ];
+
+    const weekday = weekdays[now.getDay()];
+    const month = months[now.getMonth()];
+
+    // Tulostus div-elementteihin
+    document.getElementById("paivamaara").innerHTML =
+        "Päivämäärä: " + date;
+
+    document.getElementById("aika").innerHTML =
+        "Aika: " + time;
+
+    document.getElementById("paivaJaAika").innerHTML =
+        "Päivä ja aika: " + full;
+
+    document.getElementById("viikonpaiva").innerHTML =
+        "Viikonpäivä: " + weekday;
+
+    document.getElementById("kuukausi").innerHTML =
+        "Kuukausi: " + month;
+}
+
 paivitaLista();
