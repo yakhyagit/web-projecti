@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keskustelusivu</title>
+    <link rel="icon" type="image/png" href="favicon.png.jpg">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../general.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav>
+        <a href="../index.html">Etusivu</a>
+        <a href="index.html">Portfolio</a>
+        <a href="../work.html">Työkokemus</a>
+    </nav>
+
+    <h1>Keskustelusivu</h1>
+
+    <p>
+        Tervetuloa keskustelusivulle! Voit jättää kommentin tai kysymyksen alla olevan lomakkeen avulla.
+    </p>
+
+    <!-- Dialog oynasini ochish tugmasi -->
+    <button type="button"
+        onclick="document.querySelector('dialog').showModal()">
+        Avaa lomake
+    </button>
+
+    <!-- Dialog form -->
+    <dialog>
+        <h2>Lähetä viesti</h2>
+
+        <form onsubmit="send(event)">
+
+            <div class="form-group">
+                <label for="body">Kommentti tai kysymys</label>
+                <textarea
+                    id="body"
+                    placeholder="Kirjoita viestisi tähän..."
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Sähköpostiosoite</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="esimerkki@email.com"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthday">Syntymäpäivä</label>
+                <input type="date" id="birthday">
+            </div>
+
+            <div class="form-group">
+                <label for="type">Viestin tyyppi</label>
+                <select id="type">
+                    <option>Kysymys</option>
+                    <option>Kommentti</option>
+                    <option>Palaute</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" id="usage">
+                <label for="usage">
+                    Hyväksyn tietojen käytön markkinointiin
+                </label>
+            </div>
+
+            <button type="submit">Lähetä</button>
+
+            <button type="button"
+                onclick="document.querySelector('dialog').close()">
+                Sulje
+            </button>
+
+        </form>
+    </dialog>
+
+    <h2>Aiemmat kommentit</h2>
+
+    <div class="comments">
+
+        <div class="comment">
+            <h3>Matti</h3>
+            <p>hahahahha</p>
+            <small>
+                Lähetetty: 12.01.2026 klo 14:20 | matti@email.com
+            </small>
+        </div>
+
+        <div class="comment">
+            <h3>Laura</h3>
+            <p>hahhahha</p>
+            <small>
+                Lähetetty: 11.01.2026 klo 18:45 | laura@email.com
+            </small>
+        </div>
+
+        <div class="comment">
+            <h3>Janne</h3>
+            <p>hahahahha.</p>
+            <small>
+                Lähetetty: 10.01.2026 klo 09:10 | janne@email.com
+            </small>
+        </div>
+
+        <div class="comment">
+            <h3>Emilia</h3>
+            <p>ahhahhaah.</p>
+            <small>
+                Lähetetty: 09.01.2026 klo 16:30 | emilia@email.com
+            </small>
+        </div>
+
+        <div class="comment">
+            <h3>Oskari</h3>
+            <p>Hahahhaha.</p>
+            <small>
+                Lähetetty: 08.01.2026 klo 11:55 | oskari@email.com
+            </small>
+        </div>
+
+        <div class="comment">
+            <h3>Sofia</h3>
+            <p>sivu on hyvän näkönen.</p>
+            <small>
+                Lähetetty: 07.01.2026 klo 20:15 | sofia@email.com
+            </small>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+<script>
+function send(event) {
+    event.preventDefault();
+
+    const birthdayField = document.getElementById("birthday");
+    const emailField = document.getElementById("email");
+    const typeField = document.getElementById("type");
+    const usageField = document.getElementById("usage");
+    const bodyField = document.getElementById("body");
+
+    const birthday = birthdayField.value;
+    const email = emailField.value;
+    const type = typeField.value;
+    const usage = usageField.checked;
+    const body = bodyField.value;
+
+    console.log("Birthday:", birthday);
+    console.log("Email:", email);
+    console.log("Type:", type);
+    console.log("Usage:", usage);
+    console.log("Body:", body);
+
+    document.querySelector("dialog").close();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muuttujat</title>
+    <link rel="icon" type="image/ppng" href="favicon.png.jpg"> 
+    <link rel="stylesheet" href="muutujia.css">
+</head>
+<body>
+    <section>
+     <button onclick="summa()">Summa</button>
+     <button onclick="vahennys()">Vähennys</button>
+     <button onclick="kerto()">Kerto</button>
+     <button onclick="jako()">Jako</button>
+    </section>
+    <section>
+      <h2>Laskin</h2>
+       <input type="number" id="numero1">
+       <input type="number" id="numero2">
+       <button onclick="laskin_summa()">+</button>
+       <button onclick="laskin_vahennys()">-</button>
+       <button onclick="laskin_kerto()">*</button>
+       <button onclick="laskin_jako()">/</button>
+    </section>
+
+  <section>
+
+        <h2>Math-objekti</h2>
+
+        <button onclick="math_abs()">Abs</button>
+        <button onclick="math_sqrt()">Sqrt</button>
+        <button onclick="math_pow()">Pow</button>
+        <button onclick="math_max()">Max</button>
+        <button onclick="math_min()">Min</button>
+        <button onclick="math_round()">Round</button>
+
+    </section>
+
+      <hr>
+    <section>
+
+        <h2>Tehtävälista</h2>
+
+        <input type="text" id="tehtavaInput">
+
+        <button onclick="lisaa()">Lisää</button>
+
+        <ul id="lista"></ul>
+
+    </section>
+
+    <hr>
+
+    
+    <section>
+
+        <h2>Päivämääräobjekti</h2>
+
+        <button onclick="showDate()">
+            Näytä päivämäärä ja aika
+        </button>
+
+        <div id="paivamaara"></div>
+        <div id="aika"></div>
+        <div id="paivaJaAika"></div>
+        <div id="viikonpaiva"></div>
+        <div id="kuukausi"></div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

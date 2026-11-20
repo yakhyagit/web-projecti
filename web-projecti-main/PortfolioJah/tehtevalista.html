@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehtävälista</title>
+    <link rel="icon" type="image/png" href="favicon.png.jpg">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #eef2f7, #dbe4f0);
+            color: #1e293b;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 460px;
+            background: #ffffff;
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
+        }
+
+        .top-bar {
+            margin-bottom: 14px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            color: #475569;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 8px;
+            background-color: #f1f5f9;
+            transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+        }
+
+        .back-link:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+            transform: translateX(-2px);
+        }
+
+        h1 {
+            font-size: 26px;
+            text-align: center;
+            color: #0f172a;
+            margin-bottom: 22px;
+        }
+
+        ul#lista {
+            list-style: none;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        ul#lista li {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #1e293b;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        ul#lista li:hover {
+            transform: translateX(3px);
+            background: #eff6ff;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        input#tehtavaInput {
+            flex: 1;
+            padding: 12px 14px;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input#tehtavaInput:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #2563eb;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <a href="index.html" class="back-link">← Back to portfolio</a>
+        </div>
+        <h1>Tehtävälista</h1>
+        <ul id="lista"></ul>
+        <div class="input-row">
+            <input type="text" id="tehtavaInput" placeholder="Uusi tehtävä...">
+            <button onclick="lisaa()">Lisää</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
